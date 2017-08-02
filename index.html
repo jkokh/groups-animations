@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Groups</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0"/>
+</head>
+<body style="display: none">
+
+<div class="step" id="step-1">
+    <div class="container">
+        <div class="header-text">
+            <div id="icon-introduce"></div>
+            <h1 id="introHeaderText" class="header">Introducing: Share with %%%%%%%%!</h1>
+            <div id="introSubheaderText" class="subheader">Be able to share any website or photo with your friends, family, students or any
+                other groups.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="step" id="step-2">
+    <div class="container">
+        <div class="header-text">
+            <h1 id="enableText" class="header">Here's how you enable it...</h1>
+        </div>
+        <div id="share-button-fake-container">
+            <div id="share-button-fake"></div>
+            <div class="pointer-hand"></div>
+        </div>
+    </div>
+</div>
+
+<div class="step" id="step-3">
+
+    <div class="menu">
+        <div class="menu-scrollbar-holder">
+            <div class="menu-scrollbar">
+                <div class="menu-more-button-taped"></div>
+            </div>
+        </div>
+        <div class="pointer-hand"></div>
+    </div>
+
+</div>
+
+<div class="step" id="step-4">
+    <div id="activities-holder">
+        <div id="activities-header"></div>
+        <div id="activities-list">
+            <div id="activities-line">
+                <div id="pointer-hand-drag-group"></div>
+            </div>
+        </div>
+        <div id="switch-on"></div>
+        <div id="done-fade"></div>
+        <div class="pointer-hand"></div>
+    </div>
+</div>
+
+<div class="step" id="step-5">
+    <div class="menu">
+        <div class="menu-scrollbar-holder">
+            <div class="menu-scrollbar">
+                <div class="menu-more-button-taped"></div>
+            </div>
+        </div>
+        <div class="cancel-fade"></div>
+        <div class="pointer-hand"></div>
+    </div>
+</div>
+
+<div class="step" id="step-6">
+    <div class="menu">
+        <div class="menu-scrollbar-holder">
+            <div class="menu-scrollbar">
+                <div class="menu-more-button-taped"></div>
+                <div class="scrollbar-icon"></div>
+                <div class="scrollbar-icon-tap"></div>
+            </div>
+        </div>
+        <div class="pointer-hand"></div>
+    </div>
+</div>
+
+<div class="step" id="step-7">
+    <div id="countdown"><span id="countdownText" class="countdown-text">Instructions will repeat in</span> <span class="digit">5</span></div>
+    <h1 id="tryItText">Now try it yourself.</h1>
+    <div id="arrow"></div>
+</div>
+
+<div class="caption-holder">
+    <div id="caption"></div>
+</div>
+
+<script>
+    var languages = {
+        "en": {
+            groups: {
+            	appName: "Groups",
+                introHeader: "Introducing: Share with {{appName}}!",
+                introSubheader: "Be able to share any website or photo with your friends, family, students or any other groups."
+            },
+            groupApp: {
+	            appName: "Group Contacts",
+	            introHeader: "Introducing: Share with {{appName}}!",
+	            introSubheader: "Be able to share any website or photo with your friends, family, students or any other groups."
+            },
+            enable: "Here's how you enable it...",
+            tryIt: "Now try it yourself.",
+            countdown: "Instructions will repeat in",
+        	captions: [
+		        "Scroll to the right and tap More",
+		        "Scroll to the bottom",
+		        "Drag {{appName}} to the top",
+		        "Enable the extension",
+		        "Now you can use it anytime!"
+            ]
+        },
+        "he": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "היכרות: שתף עם {{appName}}!",
+		        introSubheader: "להיות מסוגל לשתף כל אתר או תמונה עם חברים, משפחה, סטודנטים או כל קבוצה אחרת."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "היכרות: שתף עם {{appName}}!",
+		        introSubheader: "להיות מסוגל לשתף כל אתר או תמונה עם חברים, משפחה, סטודנטים או כל קבוצה אחרת."
+	        },
+	        enable: "כך תפעיל אותו ...",
+	        tryIt: "עכשיו לנסות את זה בעצמך.",
+	        countdown: "ההוראות יחזרו",
+	        captions: [
+		        "גלול ימינה והקש על עוד",
+		        "גלול לתחתית",
+		        "גרור את {{appName}} לראש הדף",
+		        "הפעל את התוסף",
+		        "עכשיו אתה יכול להשתמש בו בכל עת!"
+	        ]
+        },
+        "hi": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "परिचय: %%%%%%% के साथ साझा करें!",
+		        introSubheader: "अपने दोस्तों, परिवार, छात्रों या किसी अन्य समूह के साथ किसी भी वेबसाइट या फोटो को साझा करने में सक्षम हों।"
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "परिचय: %%%%%%% के साथ साझा करें!",
+		        introSubheader: "अपने दोस्तों, परिवार, छात्रों या किसी अन्य समूह के साथ किसी भी वेबसाइट या फोटो को साझा करने में सक्षम हों।"
+	        },
+	        enable: "यहां बताया गया है कि आप इसे कैसे सक्षम करते हैं",
+	        tryIt: "अब इसे खुद की कोशिश करो",
+	        countdown: "निर्देश दोहराएंगे",
+	        captions: [
+		        "दाईं ओर स्क्रॉल करें और अधिक टैप करें",
+		        "नीचे स्क्रॉल करें",
+		        "शीर्ष पर {{appName}} को खींचें",
+		        "एक्सटेंशन को सक्षम करें",
+		        "अब आप इसे किसी भी समय उपयोग कर सकते हैं!"
+	        ]
+        },
+        "fr": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Présentation: Partagez avec {{appName}}!",
+		        introSubheader: "Possibilité de partager tout site ou photo avec vos amis, votre famille, vos étudiants ou tout autre groupe."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Présentation: Partagez avec {{appName}}!",
+		        introSubheader: "Possibilité de partager tout site ou photo avec vos amis, votre famille, vos étudiants ou tout autre groupe."
+	        },
+	        enable: "Voici comment vous l'activez ...",
+	        tryIt: "Essayez-le vous-même.",
+	        countdown: "Les instructions se répètent dans",
+	        captions: [
+		        "Faites défiler vers la droite et appuyez sur Plus",
+		        "Faites défiler jusqu'au bas",
+		        "Drag {{appName}} au top",
+		        "Activer l'extension",
+		        "Maintenant, vous pouvez l'utiliser à tout moment!"
+	        ]
+        },
+        "es": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Introducción: ¡Comparte con {{appName}}!",
+		        introSubheader: "Ser capaz de compartir cualquier sitio web o foto con sus amigos, familiares, estudiantes o cualquier otro grupo."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Introducción: ¡Comparte con {{appName}}!",
+		        introSubheader: "Ser capaz de compartir cualquier sitio web o foto con sus amigos, familiares, estudiantes o cualquier otro grupo."
+	        },
+	        enable: "Así es como lo habilitas ...",
+	        tryIt: "Ahora inténtalo tú mismo.",
+	        countdown: "Las instrucciones se repetirán en",
+	        captions: [
+		        "Desplácese a la derecha y pulse Más.",
+		        "Desplácese hasta la parte inferior",
+		        "Arrastra {{appName}} a la parte superior",
+		        "Habilitar la extensión",
+		        "¡Ahora puedes usarlo en cualquier momento!"
+	        ]
+        },
+        "ar": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "التعريف: شارك مع {{appName}}!",
+		        introSubheader: "تكون قادرة على مشاركة أي موقع أو صورة مع أصدقائك، والأسرة، والطلاب أو أي مجموعات أخرى."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "التعريف: شارك مع {{appName}}!",
+		        introSubheader: "تكون قادرة على مشاركة أي موقع أو صورة مع أصدقائك، والأسرة، والطلاب أو أي مجموعات أخرى."
+	        },
+	        enable: "وإليك كيفية تمكينه",
+	        tryIt: "الآن حاول ذلك بنفسك.",
+	        countdown: "ستكرر التعليمات في",
+	        captions: [
+		        "مرر إلى اليسار وانقر على المزيد",
+		        "مرر إلى الأسفل",
+		        "اسحب {{appName}} إلى الأعلى",
+		        "تمكين الإضافة",
+		        "الآن يمكنك استخدامه في أي وقت!"
+	        ]
+        },
+        "it": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Introdurre: Condividi con {{appName}}!",
+		        introSubheader: "Possibilità di condividere qualsiasi sito web o foto con i tuoi amici, familiari, studenti o qualsiasi altro gruppo."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Introdurre: Condividi con {{appName}}!",
+		        introSubheader: "Possibilità di condividere qualsiasi sito web o foto con i tuoi amici, familiari, studenti o qualsiasi altro gruppo."
+	        },
+	        enable: "Ecco come lo abiliti ...",
+	        tryIt: "Provi adesso te stesso.",
+	        countdown: "Le istruzioni verranno ripetute",
+	        captions: [
+		        "Scorri a destra e tocca Altro",
+		        "Scorri verso il basso",
+		        "Trascina {{appName}} in alto",
+		        "Abilita l'estensione",
+		        "Adesso puoi utilizzarlo in qualsiasi momento!"
+	        ]
+        },
+        "ms": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Memperkenalkan: Kongsi dengan {{appName}}!",
+		        introSubheader: "Boleh berkongsi laman web atau foto dengan rakan, keluarga, pelajar atau kumpulan lain."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Memperkenalkan: Kongsi dengan {{appName}}!",
+		        introSubheader: "Boleh berkongsi laman web atau foto dengan rakan, keluarga, pelajar atau kumpulan lain."
+	        },
+	        enable: "Berikut adalah cara anda mendayakannya ...",
+	        tryIt: "Sekarang cuba sendiri.",
+	        countdown: "Arahan akan diulangi",
+	        captions: [
+		        "Tatal ke kanan dan ketik Lagi",
+		        "Tatal ke bahagian bawah",
+		        "Seret {{appName}} ke bahagian atas",
+		        "Dayakan pelanjutan",
+		        "Kini anda boleh menggunakannya pada bila-bila masa!"
+	        ]
+        },
+        "pt": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Apresentando: Compartilhar com {{appName}}!",
+		        introSubheader: "Pode compartilhar qualquer site ou foto com seus amigos, familiares, alunos ou outros grupos."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Apresentando: Compartilhar com {{appName}}!",
+		        introSubheader: "Pode compartilhar qualquer site ou foto com seus amigos, familiares, alunos ou outros grupos."
+	        },
+	        enable: "Veja como você habilita ...",
+	        tryIt: "Agora experimente você mesmo.",
+	        countdown: "As instruções repetirão",
+	        captions: [
+		        "Desloque-se para a direita e toque Mais",
+		        "Desloque-se para o fundo",
+		        "Arraste {{appName}}% para o topo",
+		        "Ative a extensão",
+		        "Agora você pode usá-lo a qualquer momento!"
+	        ]
+        },
+        "vi": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Giới thiệu: Chia sẻ với {{appName}}!!",
+		        introSubheader: "Có thể chia sẻ bất kỳ trang web hoặc ảnh với bạn bè, gia đình, sinh viên hoặc bất kỳ nhóm khác."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Giới thiệu: Chia sẻ với {{appName}}!!",
+		        introSubheader: "Có thể chia sẻ bất kỳ trang web hoặc ảnh với bạn bè, gia đình, sinh viên hoặc bất kỳ nhóm khác."
+	        },
+	        enable: "Đây là cách bạn kích hoạt nó ...",
+	        tryIt: "Bây giờ thử nó cho mình.",
+	        countdown: "Hướng dẫn sẽ lặp lại trong",
+	        captions: [
+		        "Cuộn sang phải và chạm vào Thêm",
+		        "Cuộn xuống dưới cùng",
+		        "Kéo {{appName}} lên đầu trang",
+		        "Bật tiện ích mở rộng",
+		        "Bây giờ bạn có thể sử dụng nó bất cứ lúc nào!"
+	        ]
+        },
+        "de": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Vorstellung: Mit {{appName}} teilen!",
+		        introSubheader: "In der Lage, jede Website oder Foto mit Ihren Freunden, Familie, Studenten oder andere Gruppen zu teilen."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Vorstellung: Mit {{appName}} teilen!",
+		        introSubheader: "In der Lage, jede Website oder Foto mit Ihren Freunden, Familie, Studenten oder andere Gruppen zu teilen."
+	        },
+	        enable: "Hier ist, wie Sie es aktivieren ...",
+	        tryIt: "Versuche es jetzt selbst.",
+	        countdown: "Anleitung wird wiederholen",
+	        captions: [
+		        "Blättern Sie nach rechts und tippen Sie auf Mehr",
+		        "Blättern Sie nach unten",
+		        "Ziehe {{appName}} nach oben",
+		        "Aktivieren Sie die Erweiterung",
+		        "Jetzt können Sie es jederzeit nutzen!"
+	        ]
+        },
+        "ru": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Представляем: Делитесь с {{appName}}!",
+		        introSubheader: "Можете поделиться любым сайтом или фотографией с друзьями, семьей, учениками, а также с любыми другими группами."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Представляем: Делитесь с {{appName}}!",
+		        introSubheader: "Можете поделиться любым сайтом или фотографией с друзьями, семьей, учениками, а также с любыми другими группами."
+	        },
+	        enable: "Вот так это включается...",
+	        tryIt: "Теперь попробуйте сами.",
+	        countdown: "Инструкция повторится через",
+	        captions: [
+		        "Прокрутите вправо и нажмите More",
+		        "Прокрутите список вниз",
+		        "Перетащите {{appName}} наверх",
+		        "Включите расширение",
+		        "Теперь вы можете использовать его всегда!"
+	        ]
+        },
+        "zh": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "介绍：与 {{appName}}",
+		        introSubheader: "能够与您的朋友，家人，学生或任何其他团体分享任何网站或照片。"
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "介绍：与{{appName}}分享！",
+		        introSubheader: "能够与您的朋友，家人，学生或任何其他团体分享任何网站或照片。"
+	        },
+	        enable: "启用它的方法如下：",
+	        tryIt: "现在尝试一下",
+	        countdown: "说明将重复",
+	        captions: [
+		        "向右滚动并点击更多",
+		        "滚动到底部",
+		        "将{{appName}}拖到顶部",
+		        "启用扩展",
+		        "现在你可以随时使用它！"
+	        ]
+        },
+        "uk": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "Представляємо: поділитися з {{appName}}!",
+		        introSubheader: "Можна ділитися будь-яким веб-сайтом або фотографією з друзями, родиною, студентами чи будь-якими іншими групами."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "Представляємо: поділитися з {{appName}}!",
+		        introSubheader: "Можна ділитися будь-яким веб-сайтом або фотографією з друзями, родиною, студентами чи будь-якими іншими групами."
+	        },
+	        enable: "Ось як ви його ввімкнули ...",
+	        tryIt: "Тепер спробуй сам.",
+	        countdown: "Інструкції будуть повторюватися",
+	        captions: [
+		        "Прокрутіть вправо та торкніться Більше",
+		        "Прокрутіть донизу",
+		        "Перетягніть {{appName}} догори",
+		        "Увімкнути розширення",
+		        "Тепер ви можете використовувати його в будь-який час!"
+	        ]
+        },
+        "ko": {
+	        groups: {
+		        appName: "Groups",
+		        introHeader: "소개 : {{appName}}!",
+		        introSubheader: "친구, 가족, 학생 또는 다른 그룹과 웹 사이트 또는 사진을 공유 할 수 있어야합니다."
+	        },
+	        groupApp: {
+		        appName: "Group Contacts",
+		        introHeader: "소개 : {{appName}}!",
+		        introSubheader: "친구, 가족, 학생 또는 다른 그룹과 웹 사이트 또는 사진을 공유 할 수 있어야합니다."
+	        },
+	        enable: "사용 설정 방법은 다음과 같습니다.",
+	        tryIt: "이제 직접 해보십시오.",
+	        countdown: "지침은",
+	        captions: [
+		        "오른쪽으로 스크롤하여 더보기를 누릅니다.",
+		        "아래쪽으로 스크롤",
+		        "{{appName}}를 맨 위로 드래그하십시오.",
+		        "확장 기능 사용",
+		        "이제 언제든지 사용할 수 있습니다!"
+	        ]
+        }
+    }
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

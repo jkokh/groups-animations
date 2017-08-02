@@ -1,0 +1,308 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, serif;
+    background-color: #555555;
+}
+
+.header, .subheader {
+    font-size: 1.7rem;
+    position: relative;
+}
+
+.subheader {
+    font-size: 1rem;
+}
+
+#step-2 .header {
+    font-size: 1.6rem;
+}
+
+.header-text {
+    position: relative;
+    padding: 1rem;
+}
+
+#screencast-container {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.menu {
+    background: url('../images/menu.png') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.menu-scrollbar-holder {
+    position: absolute;
+    overflow: hidden;
+}
+
+.menu-scrollbar {
+    background: url('../images/menu-scrollbar.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.menu-more-button-taped {
+    background: url('../images/more-button-taped.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+
+#activities-holder {
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 12;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#activities {
+    position: absolute;
+    left: 0;
+    z-index: 12;
+}
+
+
+
+#activities-header {
+    background: url('../images/activities-header.png') no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    z-index: 12;
+}
+
+#activities-list {
+    background: url('../images/activities-list.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 11;
+    left: 0;
+}
+
+#activities-line {
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 11;
+    left: 0;
+}
+
+#switch-on {
+    background: url('../images/switch-on.png') no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: 12;
+}
+
+#done-fade, .cancel-fade {
+    background: url('../images/done-fade.png') no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    z-index: 12;
+}
+
+.cancel-fade {
+    background: url('../images/cancel-fade.png') no-repeat;
+    background-size: contain;
+}
+
+#icons-scrollbar-container {
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #F6F4F3;
+}
+
+#icons-scrollbar, #icons-scrollbar-final {
+    background: url('../images/icons-scrollbar.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#more-button-taped {
+    background: url('../images/more-button-taped.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.scrollbar-icon-tap {
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    z-index: 20;
+}
+
+.holder {
+    text-align: center;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.step, .caption-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.caption-holder {
+    z-index: 50;
+    text-align: center;
+    display: none;
+}
+
+#caption {
+    background-color: rgba(85, 85, 85, 0.90);
+    display: inline-block;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+
+}
+
+#step-1 {
+    display: flex;
+    background-color: #555555;
+}
+
+#step-1 .container {
+    display: inline-block;
+    margin: auto;
+    padding: 30px;
+    z-index: 10;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#step-2 {
+    color: #1183ff;
+    background-color: white;
+    text-shadow: none;
+    z-index: 20;
+}
+
+#step-3, #step-5, #step-6, #step-7 {
+    background: rgba(85, 85, 85, 0.3);
+    z-index: 30;
+    height: 100%;
+}
+
+#step-4, #step-7 {
+    color: #1183ff;
+    background-color: #ffffff;
+    display: table;
+    z-index: 40;
+}
+
+#step-2 .container {
+    text-align: center;
+    width: 100%;
+}
+
+#share-button-fake-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#share-button-fake {
+    background: url('../images/share-button-fake.png') no-repeat center center;
+    background-size: contain;
+    width: 45px;
+    height: 65px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    position: absolute;
+    display: inline-block;
+}
+
+.pointer-hand, #pointer-hand-drag-group {
+    top: 0;
+    left: 0;
+    background: url('../images/pointer.png') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    z-index: 50;
+}
+
+#pointer-hand-drag-group {
+    transform: rotate(22deg);
+}
+
+#arrow {
+    background: url('../images/arrow.png') no-repeat center center;
+    background-size: contain;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-72%);
+    -webkit-transform: translateX(-72%);
+    z-index: 100;
+    position: absolute;
+}
+
+#step-4 h1 {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#countdown {
+    color: #000000;
+    padding: 20px;
+}
+
+.scrollbar-icon {
+    background: url('../images/group-contacts-scrollbar.png') no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#icon-introduce {
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+}
