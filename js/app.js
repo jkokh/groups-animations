@@ -124,9 +124,8 @@ tl.to('.scrollbar-icon-tap', 0, {
 tl.to('#arrow', 0, {width: 164 * scale, height: 212 * scale, opacity: 0});
 tl.to('#countdown', 0, {opacity: 0});
 
-
 // STEP 1 (Introduce)
-tl.to('#step-1', 0.3, {opacity: 1, display: 'flex'});
+tl.to('#step-1', 0, {opacity: 1, display: 'flex'});
 tl.from('#icon-introduce', 1, {scale: 0.8, opacity: 0});
 tl.from('#step-1 .header', 1, {delay: 1, opacity: 0, top: 50 * scale}, '-=2');
 tl.from('#step-1 .subheader', 1, {opacity: 0, top: 50 * scale}, '-=0.5');
@@ -135,9 +134,9 @@ tl.to('#step-1 .header-text', 0.5, {delay: 4, opacity: 0, top: 20 * scale});
 // STEP 2 (Share button)
 tl.to('#share-button-fake-container', 0, {height: 180 * scale});
 tl.to('#share-button-fake', 0, {width: 75 * scale, height: 95 * scale, opacity: 1});
+tl.to('#step-1', 0.4, { opacity: 0, display: 'none'}, '-=0.2');
+tl.addLabel("repeatPoint");
 tl.to('#step-2', 1, {opacity: 1, display: 'block'});
-tl.from('#step-2', 1, {opacity: 0}, '-=2');
-
 
 tl.to('#step-2 .pointer-hand', 0, {top: 23 * scale, left: 400 * scale, opacity: 0});
 tl.to('#step-2 .pointer-hand', 0.3, {opacity: 1});
@@ -303,11 +302,11 @@ tl.to('#arrow', 1, {
 			time--;
 			if (time === 0) {
 				clearInterval(interval);
-				tl.restart();
+				tl.gotoAndPlay("repeatPoint", "+=1");
+				//tl.restart();
 			}
 		}, 1000);
 	}
 });
 tl.to('#countdown', 0.5, {opacity: 1});
-tl.to('#step-1, #step-2, #step-3, #step-4, #step-5, #step-6', 0, {display: 'none'});
-tl.to('#step-7', 1, {delay: 3.5, opacity: 0});
+tl.to('#step-7 h1, #arrow, #countdown', 1, {delay: 3.5, opacity: 0});
