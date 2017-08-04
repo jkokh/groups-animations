@@ -66,7 +66,7 @@ $('.scrollbar-icon').css('background-image', 'url(' + scrollbarIcon + ')');
 $('.scrollbar-icon-tap').css('background-image', 'url(' + scrollbarIconTap + ')');
 $('#activities-line').css('background-image', 'url(' + activitiesLineImage + ')');
 
-var actualWidth = 640;
+var actualWidth = 640; // actual width of images
 
 var scale = windowSize / actualWidth;
 
