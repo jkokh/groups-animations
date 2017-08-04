@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Roboto, serif;
+    font-family: Arial;
     background-color: #555555;
 }
 
@@ -16,6 +16,8 @@ body {
 
 #step-2 .header {
     font-size: 1.6rem;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .header-text {
@@ -182,13 +184,14 @@ body {
 #caption {
     background-color: rgba(85, 85, 85, 0.90);
     display: inline-block;
-    padding: 15px;
-    font-size: 1.1rem;
+    padding: 10px;
+    font-size: 1rem;
     border-radius: 10px;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
     white-space: nowrap;
 
 }
@@ -224,6 +227,10 @@ body {
     background-color: #ffffff;
     display: table;
     z-index: 40;
+}
+
+#step-7 {
+    z-index: 70;
 }
 
 #step-2 .container {
@@ -282,6 +289,8 @@ body {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+
 }
 
 #countdown {

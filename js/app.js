@@ -101,7 +101,7 @@ tl.to('.step', 0, {display: 'none'});
 tl.to('.pointer-hand', 0, {width: 120 * scale, height: 150 * scale, opacity: 0});
 tl.to('.menu', 0, {bottom: 0, height:  818 * scale, opacity: 0});
 
-tl.to('.menu-scrollbar-holder', 0, {left: 17 * scale, width:  607 * scale, height:  221 * scale, top: 224 * scale});
+tl.to('.menu-scrollbar-holder', 0, {left: 17 * scale, width:  606 * scale, height:  221 * scale, top: 224 * scale});
 tl.to('.menu-scrollbar', 0, {left: 0, width: 1735 * scale});
 tl.to('.menu-more-button-taped', 0, {width: 120 * scale, height: 120 * scale, opacity: 0});
 
@@ -130,7 +130,7 @@ tl.to('#step-1', 0.3, {opacity: 1, display: 'flex'});
 tl.from('#icon-introduce', 1, {scale: 0.8, opacity: 0});
 tl.from('#step-1 .header', 1, {delay: 1, opacity: 0, top: 50 * scale}, '-=2');
 tl.from('#step-1 .subheader', 1, {opacity: 0, top: 50 * scale}, '-=0.5');
-tl.to('#step-1 .header-text', 0.5, {delay: 4, opacity: 0, top: 50 * scale});
+tl.to('#step-1 .header-text', 0.5, {delay: 4, opacity: 0, top: 20 * scale});
 
 // STEP 2 (Share button)
 tl.to('#share-button-fake-container', 0, {height: 180 * scale});
@@ -146,17 +146,18 @@ tl.to('#share-button-fake', 0.3, {opacity: 0.5});
 tl.to('#step-2 .pointer-hand', 0.3, {opacity: 0, display: 'none'});
 
 // STEP 3 (Menu)
+tl.addLabel('step-3-open');
 tl.to('#step-3 .menu-more-button-taped', 0, {top: 21 * scale, right: 17 * scale});
 tl.to('#step-3', 0, {display: 'block'});
 
 tl.to('#step-3', 0.3, {opacity: 1});
+tl.to('#step-3 .menu', 0, {bottom: '-100%'}, 'step-3-open');
+tl.to('#step-3 .menu', 0.5, {opacity: 1, bottom: 0}, 'step-3-open');
 
-tl.to('#step-3 .menu', 0, {bottom: '-100%'}, "-=0.5");
-tl.to('#step-3 .menu', 0.5, {opacity: 1, bottom: 0});
 tl.addLabel('caption-1-open');
 tl.call(changeCaption, [lang.captions[0]]);
 tl.to('.caption-holder', 0, {display: 'block'});
-tl.to('#caption', 0, {top: 390 * scale, scale: 0});
+tl.to('#caption', 0, {top: 250 * scale, scale: 0});
 tl.to('.caption-holder', 0, {display: 'block'});
 tl.to('#caption', 0.4, {scale: 1, opacity: 1});
 
@@ -170,21 +171,21 @@ tl.to('#step-3 .menu-scrollbar', 1, {x: -1127 * scale, ease: Power2.easeOut}, 's
 tl.to('#step-3 .pointer-hand', 0, { top: 380 * scale, left: 817 * scale});
 tl.to('#step-3 .pointer-hand', 0.3, { opacity: 1});
 tl.to('#step-3 .pointer-hand', 0.3, { top: 317 * scale, left: 817 * scale}, '-=0.3');
-tl.to('#step-3 .menu-more-button-taped', 0.3, {opacity: 1, delay: 0.3});
+tl.to('#step-3 .menu-more-button-taped', 0.3, {opacity: 1});
 
 tl.addLabel('caption-1-close');
-tl.to('#caption', 0.4, {scale: 0, opacity: 0});
+tl.to('#caption', 0.2, {scale: 0, opacity: 0});
 tl.to('.caption-holder', 0, {display: 'none'});
 
 // STEP 4 (Activities)
-tl.to('#step-4', 0, {display: 'block', y: '100%', delay: 0.3});
+tl.to('#step-4', 0, {display: 'block', y: '100%'});
 tl.to('#step-4', 0.5, {opacity: 1, y: '0%'});
-tl.to('#step-3', 0, {display: 'none'}, '-=0.5');
+tl.to('#step-3', 0, {display: 'none'});
 
 tl.addLabel('caption-2-open');
 tl.call(changeCaption, [lang.captions[1]]);
 tl.to('.caption-holder', 0, {display: 'block'});
-tl.to('#caption', 0, {top: 580 * scale, scale: 0, x: '-50%'});
+tl.to('#caption', 0, {top: 480 * scale, scale: 0, x: '-50%'});
 tl.to('#caption', 0.4, {scale: 1, opacity: 1});
 
 tl.to('#step-4 .pointer-hand', 0, { top: 655 * scale, left: 300 * scale}, 'caption-2-open');
@@ -204,11 +205,11 @@ tl.to('#activities-line', 0.3, {opacity: 0.8}, '+=0.3');
 tl.addLabel('caption-3-open');
 tl.call(changeCaption, [lang.captions[2]]);
 tl.to('.caption-holder', 0, {display: 'block'});
-tl.to('#caption', 0, {top: 580 * scale, scale: 0, x: '-50%'});
+tl.to('#caption', 0, {top: 480 * scale, scale: 0, x: '-50%'});
 tl.to('#caption', 0.4, {scale: 1, opacity: 1});
 
 tl.to('#activities-line', 2, {top: 6 * scale}, 'caption-3-open');
-tl.to('#activities-list', 2, {y: '0%', top: 85 * scale}, 'caption-3-open');
+tl.to('#activities-list', 2, {y: '0%', top: 84 * scale}, 'caption-3-open');
 tl.to('#activities-line', 0.3, {opacity: 1});
 
 
@@ -224,7 +225,7 @@ tl.to('#step-4 .pointer-hand', 0.5, {opacity: 1});
 tl.addLabel('caption-4-open');
 tl.call(changeCaption, [lang.captions[3]]);
 tl.to('.caption-holder', 0, {display: 'block'});
-tl.to('#caption', 0, {top: 580 * scale, scale: 0, x: '-50%'});
+tl.to('#caption', 0, { scale: 0, x: '-50%'});
 tl.to('#caption', 0.4, {scale: 1, opacity: 1});
 tl.to('#step-4 .pointer-hand', 0.3, {delay: 0.2, top: 140 * scale, left: 490 * scale}, 'caption-4-open');
 tl.to('#switch-on', 0.3, {opacity: 1}, '-=0.3');
@@ -254,12 +255,12 @@ tl.to('#step-5 .pointer-hand', 0.3, { opacity: 1});
 tl.to('#step-5 .pointer-hand', 0.7, { left: 390 * scale });
 tl.to('#step-5 .cancel-fade', 0.3, { opacity: 1 });
 tl.to('#step-5 .menu', 0.5, {bottom: '-100%'});
-tl.to('#step-5', 0.3, {opacity: 0});
+tl.to('#step-5', 0.3, {opacity: 0}, '-=0.3');
 
 tl.addLabel('caption-5-open');
 tl.call(changeCaption, [lang.captions[4]]);
 tl.to('.caption-holder', 0, {display: 'block'});
-tl.to('#caption', 0, {top: 390 * scale, scale: 0, x: '-50%'});
+tl.to('#caption', 0, {top: 250 * scale, scale: 0, x: '-50%'});
 tl.to('#caption', 0.4, {scale: 1, opacity: 1});
 
 tl.to('#step-2', 0.8, {opacity: 1, display: 'block'}, '-=0.8');
@@ -270,11 +271,13 @@ tl.to('#share-button-fake', 0.3, {opacity: 0.5});
 tl.to('#step-2 .pointer-hand', 0.3, {opacity: 0, display: 'none'});
 
 // STEP 6 (Menu)
+tl.addLabel('step-6-open');
 tl.to('#step-6 .scrollbar-icon', 0, {display: 'block', opacity: 1});
 tl.to('#step-6', 0, {display: 'block'});
-tl.to('#step-6', 0.3, {opacity: 1});
-tl.to('#step-6 .menu', 0, {bottom: '-100%'}, "-=0.5");
-tl.to('#step-6 .menu', 0.5, {opacity: 1, bottom: 0});
+tl.to('#step-6 .menu', 0, {bottom: '-100%'}, 'step-6-open');
+
+tl.to('#step-6', 0.3, {opacity: 1}, 'step-6-open');
+tl.to('#step-6 .menu', 0.5, {opacity: 1, bottom: 0}, 'step-6-open');
 
 tl.to('#step-6 .pointer-hand', 0, { top: 380 * scale, left: 160 * scale});
 tl.to('#step-6 .pointer-hand', 0.3, { opacity: 1});
@@ -285,12 +288,12 @@ tl.addLabel('caption-5-close');
 tl.to('#caption', 0.4, {scale: 0, opacity: 0});
 tl.to('.caption-holder', 0, {display: 'none'});
 
-tl.to('#step-1, #step-2', 0, { opacity: 0, display: 'none', delay: 0.5});
-tl.to('#step-6', 1, { opacity: 0, display: 'none'});
 
-tl.to('#step-7', 0.3, {opacity: 1, display: 'table'}, '-=0.9');
-tl.from('#step-7 h1', 1, {opacity: 0}, '-=0.5');
+tl.to('#step-7', 1, {opacity: 1, display: 'table'});
+tl.from('#step-7 h1', 1, {opacity: 0});
+tl.to('#arrow', 0, {y: -50 * scale}, '-=0.2');
 tl.to('#arrow', 1, {
+	y: 0,
 	opacity: 1, onComplete: function () {
 		var countdown = $('#countdown span.digit');
 		var time = 5;
@@ -306,4 +309,5 @@ tl.to('#arrow', 1, {
 	}
 });
 tl.to('#countdown', 0.5, {opacity: 1});
-tl.to('#step-7', 1, {delay: 4, opacity: 0});
+tl.to('#step-1, #step-2, #step-3, #step-4, #step-5, #step-6', 0, {display: 'none'});
+tl.to('#step-7', 1, {delay: 3.5, opacity: 0});
